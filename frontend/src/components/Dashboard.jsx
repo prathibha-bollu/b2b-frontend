@@ -30,7 +30,7 @@ export const Dashboard = () => {
       ]);
 
       const orders = ordersRes.data.data || [];
-      const customers = customersRes.data.data || [];
+
 
       const pendingCount = orders.filter(o => o.status === 'pending').length;
       const totalRevenue = orders.reduce((sum, o) => sum + (parseFloat(o.total_amount) || 0), 0);
