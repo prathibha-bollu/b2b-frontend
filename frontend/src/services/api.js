@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+const API_URL = process.env.REACT_APP_API_URL || 'https://b2b-backend-app-prathibha-h6arhea3e6ajhyby.southindia-01.azurewebsites.net/';
 
 const api = axios.create({
   baseURL: API_URL,
