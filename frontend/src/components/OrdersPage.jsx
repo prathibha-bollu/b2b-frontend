@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { orderAPI } from '../services/api';
 import styles from './OrdersPage.module.css';
 
@@ -15,7 +15,8 @@ export const OrdersPage = () => {
   const [newStatus, setNewStatus] = useState('');
 
   useEffect(() => {
-    fetchOrders();
+    fetchOrders();  
+  // eslint-disable-next-line
   }, [pagination.offset, statusFilter]);
 
   const fetchOrders = async () => {

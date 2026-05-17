@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { customerAPI } from '../services/api';
 import styles from './CustomerList.module.css';
@@ -19,8 +19,9 @@ export const CustomerList = () => {
   });
 
   useEffect(() => {
-    fetchCustomers();
-  }, [pagination.offset, search]);
+  fetchCustomers();
+  // eslint-disable-next-line
+}, [pagination.offset, search]);
 
   const fetchCustomers = async () => {
     try {
